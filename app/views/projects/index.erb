@@ -1,0 +1,20 @@
+<h1 style="text-align:center; line-height: 1.5"> Welcome to Franklin's Space <br>
+where you can check on my Flatiron Projects</h1>
+<br>
+<img style="display: block; width: 50%; margin: auto" src="https://csg.tinkercad.com/things/8IjuVJ9rjv4/t725.png?rev=1525190678115653959&amp;s=&amp;v=1"  >
+<br>
+<div style="margin: 5% 10%;">
+<h2> ALL PROJECTS </h2>
+    <div> 
+
+    <%= button_to "Create a Project", new_project_url, :method => :get %>
+
+    <% @projects.map do |project|%>
+        <p> # <%= project.id %>
+        <h2 style="letter-spacing :1.5px"> <%= link_to project.name, project_path(project.id) %></h2>
+        <p style = "color: blue;"><%= project.description %></p> 
+        <br>
+
+        <%end%>
+
+    </div>

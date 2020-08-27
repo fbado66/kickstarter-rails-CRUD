@@ -1,0 +1,19 @@
+<div style ="text-align: center"> 
+    <br><br><br>
+    <h3> Hello friend, you are viewing project # <%= @project.id %></h3><br> 
+        <h4> Project Title </h4>
+        <h2 style="color: blue"> <%= @project.name %>
+            <br><br> 
+        <h4> Project Title </h4>
+        <p style='letter-spacing: 1px; margin: 20px'> <%= @project.description %> </p>
+        <br><br><br>
+
+        <%= button_to "UPDATE", edit_project_path(@project), :method => :get %>
+        <br>
+        <%= button_to "DELETE", @sproject, :method => :delete %>
+        <br><br>
+        <%= button_to "ALL PROJECTS", projects_path, :method => :get %>
+
+
+</div>
+
